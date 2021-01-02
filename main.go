@@ -2,12 +2,15 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
-func repeatMe(words ...string) {
-	fmt.Println(words)
+func lenAndUpper(name string) (int, string) {
+	defer fmt.Println("I'm done")
+	return len(name), strings.ToUpper(name)
 }
 
 func main() {
-	repeatMe("test", "test2", "test3")
+	totalLength, upperName := lenAndUpper("jangwonseok")
+	fmt.Println(totalLength, upperName)
 }
